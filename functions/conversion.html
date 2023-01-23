@@ -17,7 +17,7 @@
         </h1>
 
         <div id="app">
-            View the answer in the console
+            
         </div>
 
         <!-- Start of Script -->
@@ -25,19 +25,27 @@
 
         // step 1
         // Create const for conversion
-
+        
+        const conversion = 0.6214;
 
         // step 2
         // Get user input and save to variable
 
+        let numInput = prompt("How many km ?");
 
         // step 3
         // Perform calculation and save result
-
+        
+        let mileFinal = numInput * conversion;
+        
 
         // step 4
         // Display result in DOM, alert or console
-        console.log("The distance of " + /*<<input var>>*/ + "km after being converted is " + /*<<result var>>*/ + " in miles");
+        console.log (`The distance of ${numInput} km after being converted is ${mileFinal} in miles`);
+
+        const appElement = document.getElementById("app");
+        appElement.innerHTML += "The Distance in miles are: " + mileFinal;
+
 
         </script>
         <!-- End of Script -->
